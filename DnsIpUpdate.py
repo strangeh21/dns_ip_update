@@ -7,7 +7,7 @@ import time
 def main():
     dns_ip_update = DnsIpUpdate()
     dns_ip_update.update_dns_ip()
-    schedule.every(5).minutes.do(dns_ip_update.update_dns_ip)
+    schedule.every(15).minutes.do(dns_ip_update.update_dns_ip)
     while True:
         try:
             schedule.run_pending()
